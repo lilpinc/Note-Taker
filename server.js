@@ -8,9 +8,10 @@ const app = express();
 
 // middleware for parsing JSON 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true}));
 app.use('/api', api);
-
-app.use(express.static('pulbic'));
+// middleware to serve upt static assets from the public folder
+app.use(express.static('public'));
 
 
 // GET route for notes page
