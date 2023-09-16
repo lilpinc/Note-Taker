@@ -16,7 +16,15 @@ app.use(express.static('public'));
 
 // GET route for notes page
 app.get('/notes', (req, res) =>
-res.sendFile(path.join(__dirname, '/public/notes.html'))
+res.sendFile(path.join(__dirname, 'Develop/public/notes.html'))
+);
+// Get route for homepage
+app.get('/', (req, res) => 
+  res.sendFile(path.join(__dirname, 'Develop/public', 'index.html'))
+);
+
+app.get('*', (req, res) => 
+  res.sendFile(path.join(__dirname, 'Develop/public', 'index.html'))
 );
 
 app.listen(PORT, () =>

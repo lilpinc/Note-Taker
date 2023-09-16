@@ -1,11 +1,20 @@
 const notes = require('express').Router();
 const { v4: uuidv4 } = require('uuid');
-const { readAndAppend, readFromFile } = require('../helper/fsUtils');
+const fs = require('fs');
+const db = require('../db/db.json')
+
+
 
 // Get route for retrieving all the feedback
-notes.get('/', (req, res) => 
-readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
-);
+notes.get('/', (req, res) => {
+fs.readFile('./db/db.json', (err, data) => {
+    //error logging
+    if (err) throw err;
+    let dbData = JSON.parse(data);
+    //Returns new database
+    res.json(dbData)
+});   
+});
 
 // POST route for a new note 
 notes.post ('/', (req, res)  => {
@@ -15,7 +24,7 @@ console.log(req.body);
 
 const {title, text} = req.body;
 
-// if the body is true (not empty), add info to the database
+// if the body has a title and a text(not empty), add info to the database
 if (title && text) {
     const newNote = {
      title,
@@ -23,13 +32,12 @@ if (title && text) {
      id: uuidv4(),
     };
 
-   readAndAppend(newNote, './db/db.json');
+   db.push(newNote)
 
-   const response = {
-    status: 'success',
-    body: newNote
-   }
-   res.json(response);
+   fs.writeFileSync('./db/db.json', JSON.stringify(db))
+
+    //responds with the note object used
+    res.json(db)
 }else {
     res.error('Error in adding note');
 } 
