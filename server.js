@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require ('path');
-const api = require('./Develop/route/index.js');
+const api = require('./route/index.js');
 
 const PORT = process.env.port || 3001;
 
@@ -16,15 +16,15 @@ app.use(express.static('public'));
 
 // GET route for notes page
 app.get('/notes', (req, res) =>
-res.sendFile(path.join(__dirname, 'Develop/public/notes.html'))
+res.sendFile(path.join(__dirname, 'public', 'notes.html'))
 );
 // Get route for homepage
 app.get('/', (req, res) => 
-  res.sendFile(path.join(__dirname, 'Develop/public', 'index.html'))
+  res.sendFile(path.join(__dirname, 'public', 'index.html'))
 );
 
 app.get('*', (req, res) => 
-  res.sendFile(path.join(__dirname, 'Develop/public', 'index.html'))
+  res.sendFile(path.join(__dirname, 'public', 'index.html'))
 );
 
 app.listen(PORT, () =>
