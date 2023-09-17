@@ -16,40 +16,40 @@ Note Taker
   
 ### Description
 
-    This application is a note taker that can be used to write and save notes. It uses express.js in the backend and javascript in the front end. It can save, retrieve and delte note data from a  JSON file. This application will also be deployed to Heroku.
+This application is a note taker that can be used to write and save notes. It uses express.js in the backend and javascript in the front end. It can save, retrieve and delte note data from a  JSON file. This application will also be deployed to Heroku.
 
 ## Motivation
 
-    This Note Taker demonstrates how you can use express.js in the backend to create a dynamic application. By using express.js, the information is stored in the server rather than local storage and can be found quickly and efficiently with the correct route filing structure.
+This Note Taker demonstrates how you can use express.js in the backend to create a dynamic application. By using express.js, the information is stored in the server rather than local storage and can be found quickly and efficiently with the correct route filing structure.
 
 ### Installation
 
-    1. Clone the application: https://github.com/lilpinc/Note-Taker 
-    2. npm i 
-    3. if needed, npm i uuid 
-    4. npm start or node server.js to run the server where you can find the page on localhost:3001
+1. Clone the application: https://github.com/lilpinc/Note-Taker 
+2. npm i 
+ 3. if needed, npm i uuid 
+4. npm start or node server.js to run the server where you can find the page on localhost:3001
 
 ### Usage
 
-    This application can be used by typing in npm start or node server.js. If you need to write down notes somewhere and want to them to save easily, use this app! This application can also be used to understand basic backend with express.js.
+This application can be used by typing in npm start or node server.js. If you need to write down notes somewhere and want to them to save easily, use this app! This application can also be used to understand basic backend with express.js.
 
 ### Questions?
 
-    GitHub link to profile: https://github.com/lilpinc/
+GitHub link to profile: https://github.com/lilpinc/
 
-    Email: lilpinc@gmaill.com
+Email: lilpinc@gmaill.com
  
 
 ### Credits
 
-    - Bootcamp Instructor Dan & Assistants for creating the frontend portion of this project and supplying the needed class material to complete the challenge
-    - https://www.npmjs.com/package/uuid
-    - https://www.w3schools.com/jsref/jsref_splice.asp    
+ - Bootcamp Instructor Dan & Assistants for creating the frontend portion of this project and supplying the needed class material to complete the challenge
+- https://www.npmjs.com/package/uuid
+- https://www.w3schools.com/jsref/jsref_splice.asp    
 
 
 ## License 
 
-    MIT license
+ MIT license
 
 
 
