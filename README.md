@@ -10,6 +10,7 @@ Note Taker
   * [Motivation](#motivation)
   * [Installation](#installation)
   * [Usage](#usage)
+  * [Screenshots](#screenshots)
   * [Questions](#questions)
   * [Credits](#credits)
   * [License](#license)
@@ -25,13 +26,18 @@ This Note Taker demonstrates how you can use express.js in the backend to create
 ### Installation
 
 1. Clone the application: https://github.com/lilpinc/Note-Taker 
-2. npm i 
- 3. if needed, npm i uuid 
+2. type in "npm i" into integrated terminal 
+3. if needed, also type in "npm i uuid" for the random id generator 
 4. npm start or node server.js to run the server where you can find the page on localhost:3001
 
 ### Usage
 
 This application can be used by typing in npm start or node server.js. If you need to write down notes somewhere and want to them to save easily, use this app! This application can also be used to understand basic backend with express.js.
+
+### Screenshots
+![Screenshots](/public/images/Screen%20Shot%202023-09-17%20at%2012.47.35%20PM.png)
+![Screenshots](/public/images/Screen%20Shot%202023-09-17%20at%2012.47.43%20PM.png)
+![Screenshots](/public/images/Screen%20Shot%202023-09-17%20at%2012.47.53%20PM.png)
 
 ### Questions?
 
